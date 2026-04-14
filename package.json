@@ -1,0 +1,14 @@
+{
+  "name": "neuron-synapse",
+  "version": "1.0.0",
+  "description": "neuron + synapse files",
+  "license": "MIT",
+  "files": [
+    "neuron.js",
+    "synapse.js",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
