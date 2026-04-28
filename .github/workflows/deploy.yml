@@ -23,4 +23,4 @@ jobs:
 
       - name: Upload to bucket
         run: |
-          gsutil -m rsync -r -d dist gs://foigeredu
+          gsutil -m rsync -r -d . gs://foigeredu
