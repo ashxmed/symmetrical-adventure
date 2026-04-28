@@ -13,14 +13,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Authenticate GCP
+      - name: auhtenicate 
         uses: google-github-actions/auth@v2
         with:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
-      - name: Setup gcloud
+      - name: Setup 
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Upload to bucket
+      - name: Upload t
         run: |
           gsutil -m rsync -r -d . gs://foigeredu
+
+      - name: Disable cahcing
+        run: |
+          gsutil -m setmeta -r -h "Cache-Control:no-store,max-age=0" gs://foigeredu
